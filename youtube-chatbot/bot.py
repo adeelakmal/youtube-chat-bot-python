@@ -99,7 +99,7 @@ while(True):
                     "liveChatId": liveChatId,
                     "type": "textMessageEvent",
                     "textMessageDetails": {
-                        "messageText": f"{name} HAD AN EL-BRUH MOMENTO NARUKAMI-KUN!"}}}
+                        "messageText": f"{name} says bruh!"}}}
             )
             insert.execute()
             print('Message Replied!')
@@ -112,14 +112,18 @@ while(True):
                     "liveChatId": liveChatId,
                     "type": "textMessageEvent",
                     "textMessageDetails": {
-                        "messageText": f"{url} here ya go dumbass weeb"}}}
+                        "messageText": f"{url} here ya go join :)"}}}
             )
             insert.execute()
             print('Message Replied!')
 
-        elif Message == "!misg":
-            quotes = ['These b1tches and Whor3s got nothing on me', 'Wom3n ew!',
-                      'Go back to the kitchen and cook me some cabbage', 'Imma dropkick a b1tch into the TV']
+        elif Message == "!rand":
+            quotes = ['Why are these all dad jokes?',
+                      'What’s brown and sticky? A stick.',
+                      'Two guys walked into a bar. The third guy ducked.',
+                      'How do you get a country girl’s attention? A tractor.',
+                      'Why are elevator jokes so classic and good? They work on many levels.',
+                      'What do you call a pudgy psychic? A four-chin teller.']
             message = random.choice(quotes)
             insert = youtube.liveChatMessages().insert(
                 part='snippet',
@@ -127,7 +131,7 @@ while(True):
                     "liveChatId": liveChatId,
                     "type": "textMessageEvent",
                     "textMessageDetails": {
-                        "messageText": f'Adachi Sahab ne Farmaya "{message}"'}}}
+                        "messageText": f'"{message}"'}}}
             )
             insert.execute()
             print('Message Replied!')
